@@ -3,7 +3,7 @@ import * as React from "react";
 import { useParams } from "next/navigation";
 import { ZegoUIKitPrebuilt } from "@zegocloud/zego-uikit-prebuilt";
 
-const page = () => {
+export default function Room () {
   const { roomid }: {roomid : string} = useParams();
 
   const myMeeting = async (element: HTMLDivElement) => {
@@ -38,6 +38,4 @@ const page = () => {
   return <div>
     <div ref={setRef} />
   </div>;
-};
-
-export default page;
+}
