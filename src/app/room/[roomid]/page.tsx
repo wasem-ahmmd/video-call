@@ -19,10 +19,12 @@ export default function Room () {
     const zc = ZegoUIKitPrebuilt.create(kitToken)
     zc.joinRoom({
       container: element,
+      turnOnMicrophoneWhenJoining:true,
+      turnOnCameraWhenJoining: true,
       sharedLinks:[
         {
           name: "copy link",
-          url: `http://localhost:3000/room/${roomid}`
+          url: `https://video-call-ebon-ten.vercel.app/room/${roomid}`
         }
       ],
       scenario: {
